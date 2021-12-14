@@ -56,8 +56,8 @@
             <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" aria-describedby="phoneHelp" name="phone">
             <div id="phoneHelp" class="form-text">We'll never share your number with anyone else.</div>
         </div>
-    <br>
-        <div class="d-grid gap-2">
+    
+            <a href="viewrecords.php" class="btn btn-default">Back To List</button>
             <button type="submit" name="submit" button class="btn btn-success" >Save Changes</button>
         </div>    
     </form>   
