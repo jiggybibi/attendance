@@ -24,9 +24,7 @@
 
     }
 
-?>
-
-    
+?> 
     
 
 <!-- This prints out values that were passed to the action page using method="get"-->
