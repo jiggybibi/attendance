@@ -8,7 +8,7 @@
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $username = strtolower(trim($_POST['username']));
             $password = $_POST['password'];
-            $newpassword = md5($password.$username);
+            $new_password = md5($password.$username);
 
             $result = $user->getUser($username,$new_password);
 
@@ -16,7 +16,7 @@
                 echo '<div class="alert alert-danger">Username or Password is incorrect! Please try again. </div>';
             }else{
                 $_SESSION['username'] = $username;
-                $_SESSION['id'] = $result['id'];
+                $_SESSION['userid'] = $result['id'];
                 header("Location: viewrecords.php");
             }
         }
@@ -37,10 +37,9 @@
                  </td>
             </tr>
         </table><br/><br/>
-        <button type="submit" value="Login" class="btn btn-primary btn-block">Login<br/>
+        <input type="submit" value="Login" class="btn btn-primary btn-block"><br/>
         <a href="#"> Forgot Password </a>
 
-    </form><br/><br/><br/>
+    </form><br/><br/><br/><br><br>
 
 <?php include_once 'includes/footer.php'?>
-</div>
